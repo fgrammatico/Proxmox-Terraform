@@ -25,3 +25,12 @@ provider "proxmox" {
     _capturelog = "./capture.log"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket         = "hacknet-terraform-state"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "hacknet-terraform-state-lock"
+  }
+}
