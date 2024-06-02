@@ -6,6 +6,10 @@ terraform {
       version               = "2.9.14"
       configuration_aliases = [proxmox.kubernetes]
     }
+    ansible = {
+      source = "ansible/ansible"
+      version = "1.3.0"
+    }
   }
 }
 
