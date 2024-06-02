@@ -41,3 +41,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+# Python #
+**/venv/*
