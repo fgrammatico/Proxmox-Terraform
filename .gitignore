@@ -4,7 +4,7 @@
 ### Ansible ###
 *.retry
 inventory.yaml
-**/kubespray/*
+kubespray/*
 
 ### Terraform ###
 # Local .terraform directories
