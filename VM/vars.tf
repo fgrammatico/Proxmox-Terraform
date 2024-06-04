@@ -1,25 +1,25 @@
 variable "ssh_key" {
-  default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBmafSfm/s+W9JZRN+FkcYhR54Hx4DD6Z/uJWfFuJVf5 MyPrivKey"
+  default = "KEY"
 }
 
 variable "proxmox_api_url" {
-    default = "https://192.168.1.157:8006/api2/json"
+    default = "https://IP:8006/api2/json"
 }
 
 variable "proxmox_host" {
-    default = "Datacenter"
+    default = "NAME"
 }
 
 variable "template_name" {
-    default = "Debian12-Base"
+    default = "OS"
 }
 
 variable "proxmox_api_token_secret" {
-    default = "68304617-748b-452b-9873-41c4e299f083"
+    default = "SECRET"
 }
 
 variable "proxmox_api_token_id" {
-    default = "terraform-prov@pve!mytoken"
+    default = "TOKEN"
 }
 
 variable "vmid" {
@@ -41,7 +41,7 @@ variable "rootfs_size" {
 variable "ips" {
     description = "IPs of the containers, respective to the hostname order"
     type        = list(string)
-	default     = ["192.168.13.45"]
+	default     = ["IP"]
 }
 
 variable "user" {
