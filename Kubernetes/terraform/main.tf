@@ -24,10 +24,3 @@ module "kubernetes_cluster" {
     proxmox = proxmox.kubernetes
   }
 }
-
-resource "ansible_playbook" "playbook" {
-  playbook   = "playbook.yml"
-  name       = "swap off"
-  hosts      = module.kubernetes_cluster.control_plane_hostnames
-  replayable = true
-}

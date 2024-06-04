@@ -1,6 +1,0 @@
-- import_playbook: kubernetes_sigs.kubespray.cluster.yml
-
-- hosts: K8
-  name: Install Kubernetes
-  tasks:
-    # Your tasks go here
