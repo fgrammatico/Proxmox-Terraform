@@ -24,10 +24,3 @@ module "kubernetes_cluster" {
     proxmox = proxmox.kubernetes
   }
 }
-resource "null_resource" "ansible_playbook" {
-  depends_on = [module.kubernetes_cluster]
-
-  provisioner "local-exec" {
-    command = "ansible-playbook -i your_inventory_file.yml your_playbook.yml"
-  }
-}
